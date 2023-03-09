@@ -1,0 +1,69 @@
+@use "../abstracts/variable" as var;
+@use '../abstracts/mixin' as mix;
+
+
+body {
+	font-family: var.$ff-body;
+}
+
+.header .nav-link {
+	font-size: 0.875rem;
+}
+
+// *********************** Utility Classes ***********************//
+.heading-primary {
+	@include mix.bold-heading();
+	font-size: 1.4rem;
+	line-height: 1.5;
+}
+
+.heading-secondary {
+	@include  mix.bold-heading();
+	font-size: 1.05rem;
+
+}
+
+.btn {
+	font-family: var.$ff-main;
+	text-align: center;
+}
+
+
+
+
+// *********************** section-hero ***********************//
+
+
+.btn-form {
+	font-size: 1rem;
+	font-weight: var.$fw-bold;
+}
+
+// *********************** section-feature ***********************//
+
+
+.btn-information {
+	color: var.$c-accent_cyan;
+	font-size: 0.9375rem;
+}
+
+.testimonial-text {
+	font-size: 0.8125rem;
+	line-height: 1.8;
+
+	// quote left
+	& i {
+		font-size: 1.5rem;
+	}
+}
+
+.customer-name	{
+	font-family: var.$ff-main;
+	font-size: 0.875rem;
+	font-weight: var.$fw-bold;
+}
+
+.customer-occupation {
+	font-size: 0.75rem;
+}
+

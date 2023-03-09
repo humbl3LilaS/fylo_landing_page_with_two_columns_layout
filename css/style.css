@@ -1,0 +1,305 @@
+/********************* Font Import *********************/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+form > button {
+  cursor: pointer;
+}
+
+em {
+  font-style: normal;
+}
+
+b {
+  font-weight: normal;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.header .nav-link {
+  font-size: 0.875rem;
+}
+
+.heading-primary {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.heading-secondary {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.btn {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+.btn-form {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.btn-information {
+  color: hsl(170, 45%, 43%);
+  font-size: 0.9375rem;
+}
+
+.testimonial-text {
+  font-size: 0.8125rem;
+  line-height: 1.8;
+}
+.testimonial-text i {
+  font-size: 1.5rem;
+}
+
+.customer-name {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.customer-occupation {
+  font-size: 0.75rem;
+}
+
+button.btn {
+  width: 100%;
+  padding-block: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(224, 93%, 58%);
+  color: white;
+}
+
+.header {
+  padding: 3.5rem min(10%, 1.5rem);
+}
+.header-logo {
+  flex-basis: 25%;
+  margin-right: auto;
+}
+.header-logo_img {
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+}
+
+.nav-item {
+  flex-basis: 20%;
+  text-align: center;
+}
+
+.section-hero {
+  padding: 3.5rem min(10%, 2.5rem);
+  text-align: center;
+}
+
+.heading-primary {
+  margin-bottom: 1.5rem;
+}
+
+.hero-img_container {
+  margin-bottom: 2rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-text {
+  margin-bottom: 1.5rem;
+}
+
+.input-email {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.btn-form {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.section-information {
+  padding-block: 2rem 6rem;
+  margin-top: 6rem;
+  background-color: hsl(240, 75%, 98%);
+  position: relative;
+}
+.section-information::before {
+  content: "";
+  width: 100%;
+  height: 6rem;
+  display: block;
+  position: absolute;
+  top: -6rem;
+  left: 0;
+  background: url("../images/bg-curve-mobile.svg") bottom left/100% no-repeat;
+}
+
+.information-img_container, .heading-secondary {
+  padding-inline: min(10%, 2.5rem);
+}
+
+.illustration {
+  width: 100%;
+}
+
+.heading-secondary {
+  margin-block: 3.5rem 2rem;
+}
+
+.information-text {
+  padding-inline: min(10%, 1.5rem);
+  margin-block: 2rem;
+}
+
+.btn-information {
+  width: max-content;
+  display: block;
+  padding-bottom: 5px;
+  margin: 3rem auto;
+  border-bottom: 2px solid hsl(170, 45%, 43%);
+}
+
+.btn-information i {
+  margin-left: 0.5rem;
+}
+
+.testimonial {
+  width: min(85%, 22.5rem);
+  padding: 1.5rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0.5px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+.testimonial-text {
+  margin-bottom: 1.5rem;
+}
+.testimonial-text i {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.customer-img {
+  max-width: 2.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.customer-information {
+  display: inline-block;
+  vertical-align: 20%;
+}
+.customer-information > * {
+  display: block;
+}
+.customer-name {
+  margin-bottom: 5px;
+}
+
+.section-cta {
+  padding: 3.5rem min(10%, 2.5rem);
+  background: hsl(238, 22%, 44%);
+  color: white;
+}
+.section-cta .heading-secondary {
+  margin-top: unset;
+}
+.section-cta :is(.input-email, .btn-form) {
+  border-radius: 2px;
+}
+.section-cta .btn-form {
+  font-size: 0.8125rem;
+}
+
+.cta-information {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.footer {
+  padding: 3.5rem min(10%, 2.5rem);
+  background-color: hsl(243, 87%, 12%);
+  color: white;
+}
+.footer-logo {
+  filter: brightness(0) invert(1);
+}
+
+.site-address {
+  margin-block: 2rem;
+}
+.site-address_icon {
+  margin-right: 1rem;
+}
+.site-address_link {
+  vertical-align: 15%;
+}
+
+.footer_nav-pages {
+  margin-bottom: 4rem;
+}
+
+.footer_nav-pages .footer_nav-item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.footer_nav-social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer_nav-social > * {
+  position: relative;
+}
+.footer_nav-social > *::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=style.css.map */

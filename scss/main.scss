@@ -1,0 +1,18 @@
+//******************* base *******************//
+
+@use 'base/reset';
+@use 'base/typography';
+
+//******************* abstracts *******************//
+@use	'abstracts/variable';
+@use  'abstracts/utility';
+
+
+//******************* components *******************//
+@use 'component/header';
+@use 'component/hero';
+@use 'component/feature';
+@use 'component/cta';
+@use 'component/footer';
+
+

@@ -1,0 +1,36 @@
+/********************* Font Import *********************/
+// Font import => font-family: 'Raleway', sans-serif;
+// weight : 400, 700
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+// Font import => font-family: 'Open Sans', sans-serif;
+// weight: 400
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+//****************** Colors ******************//
+
+$c-primary_darkblue: hsl(243, 87%, 12%);
+$c-primary_desaturatedblue: hsl(238, 22%, 44%);
+$c-accent_brightblue: hsl(224, 93%, 58%);
+$c-accent_cyan: hsl(170, 45%, 43%);
+$c-natural_grayishblue: hsl(240, 75%, 98%);
+$c-natural_lightgray: hsl(0, 0%, 75%);
+
+//****************** Typography ******************//
+
+$ff-body: 'Open Sans', sans-serif;
+$ff-main: 'Raleway', sans-serif;
+$fw-bold: 700;
+
+
+
+//****************** Spacing ******************//
+$hz-gap_small : min(10%, 1.5rem);
+$hz-gap_large: min(10%, 2.5rem);
+$vt-gap_small : 2rem;
+$vt-gap_medium : 3.5rem;
+
+
+//****************** Shadow ******************//
+$bsh-btn_main: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+$bsh-testimonial: 0 0 3px 0.5px rgba(0, 0, 0, 0.05);

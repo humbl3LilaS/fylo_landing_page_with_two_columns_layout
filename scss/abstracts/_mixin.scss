@@ -1,0 +1,13 @@
+@use '../abstracts/variable';
+
+@mixin bold-heading {
+	font-family: variable.$ff-main;
+	font-weight: variable.$fw-bold;
+	text-align: center;
+}
+
+@mixin abs-center {
+	position: absolute;
+	inset: 50%;
+	transform: translate(-50%, -50%);
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="./images/favicon-32x32.png">
+
+  <!--  Font awesome import link via cdnjs-->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+
+</head>
+<body>
+<!--  header start-->
+<header class="header">
+
+  <!-- nav bar start -->
+  <nav class="header-nav" aria-label="Header Navigation">
+    <ul class="nav-container">
+      <li class="nav-item header-logo">
+        <a href="#" class="nav-link">
+          <img src="./images/logo.svg" alt="Logo of Fylo"
+               class="header-logo_img">
+        </a>
+      </li>
+
+      <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Sign In</a></li>
+    </ul>
+  </nav> <!-- nav bar end -->
+
+</header> <!-- header end -->
+
+<!-- section-hero start -->
+<section class="section-hero">
+
+  <!--  hero-image-->
+  <div class="hero-img_container">
+    <img src="./images/illustration-1.svg" alt="" class="hero-img">
+  </div>
+
+  <!--  hero-information-->
+  <div class="hero-info">
+    <h1 class="heading-primary">
+      All your files in one secure location, accessible
+      anywhere.
+    </h1>
+
+    <p class="hero-text">
+      Fylo stores your most important files in one secure
+      location. Access them wherever you need, share and collaborate with
+      friends,
+      family, and co-workers.
+    </p>
+
+    <form class="get-started">
+      <input type="email" class="input-email"
+             aria-label="Get Started today by entering you email"
+             placeholder="Enter your email.."
+      >
+      <button type="submit" class="btn btn-form">Get Started</button>
+    </form>
+  </div>
+
+</section> <!-- section-hero end -->
+
+<section class="section-information">
+
+  <div class="information-img_container">
+    <img src="./images/illustration-2.svg" alt="" class="illustration">
+  </div>
+
+  <div class="information-container">
+    <h2 class="heading-secondary">
+      Stay productive, wherever you are
+    </h2>
+
+    <p class="information-text">Never let location be an issue when accessing
+      your files. Fylo has you
+      covered for all of your file storage needs.
+    </p>
+
+    <p class="information-text">Securely share files and folders with friends,
+      family and colleagues for
+      live collaboration. No email attachments required!
+    </p>
+
+    <a href="#" class="btn btn-information">See how Fylo works <i
+        class="fa-solid fa-circle-arrow-right"></i></a>
+
+    <article class="testimonial">
+      <h3 class="sr-only">Such a well-oiled collaboration machine</h3>
+
+      <p class="testimonial-text">
+        <i class="fa-solid fa-quote-left"></i> Fylo has improved our team
+        productivity by an
+        order
+        of magnitude. Since
+        making the switch our team has become a well-oiled collaboration
+        machine.
+      </p>
+
+      <p class="customer">
+        <img src="./images/avatar-testimonial.jpg"
+             alt="Photo of a customer Kyle Burton who testify the greatness of our product"
+             class="customer-img">
+        <span class="customer-information">
+          <em class="customer-name">Kyle Burton</em>
+         <b class="customer-occupation">Founder & CEO, Huddle</b>
+        </span>
+      </p>
+
+    </article>
+  </div>
+</section>
+
+<section class="section-cta">
+  <div class="cta-information">
+    <h2 class="heading-secondary">Get early access
+      today</h2>
+
+    <p class="cta-text">
+      It only takes a minute to sign up and our free starter
+      tier is extremely generous.
+      If you have any questions, our support team would be happy to help you.
+    </p>
+  </div>
+
+  <form class="form-cta">
+    <input type="email" class="input-email"
+           aria-label="Get early access today, Contact Us!">
+    <button type="submit" class="btn btn-form">Get Started For Free</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="footer-info">
+    <img src="./images/logo.svg" alt="Logo of Fylo" class="footer-logo">
+    <p class="site-address">
+      <img src="./images/icon-phone.svg"
+           alt="Icon that represent the phone number of Fylo"
+           class="site-address_icon">
+      <a href="tel:+1-543-123-4567" class="site-address_link">Phone:
+        +1-543-123-4567</a>
+    </p>
+    <p class="site-address">
+      <img src="./images/icon-email.svg"
+           alt="Icon that represent the mail address of Fylo"
+           class="site-address_icon">
+      <a href="mailto:example@fylo.com" class="site-address_link">example@fylo.com</a>
+    </p>
+  </div>
+
+  <nav class="footer-nav">
+
+    <ul class="footer_nav-pages">
+      <li class="footer_nav-item">
+        <a href="#" class="footer_nav-link">About Us</a>
+      </li>
+      <li class="footer_nav-item">
+        <a href="#" class="footer_nav-link">Jobs</a>
+      </li>
+      <li class="footer_nav-item">
+        <a href="#" class="footer_nav-link">Press</a>
+      </li>
+      <li class="footer_nav-item">
+        <a href="#" class="footer_nav-link">Blog</a>
+      </li>
+    </ul>
+
+    <ul class="footer_nav-pages">
+      <li class="footer_nav-item">
+        <a href="#" class="footer_nav-link">Contact Us</a>
+      </li>
+      <li class="footer_nav-item">
+        <a href="#" class="footer_nav-link">Terms</a>
+      </li>
+      <li class="footer_nav-item">
+        <a href="#" class="footer_nav-link">Privacy</a>
+      </li>
+    </ul>
+
+    <ul class="footer_nav-social">
+      <li class="footer_nav-item">
+        <a href="#" class="footer_nav-item">
+          <span class="sr-only">Facebook: </span>
+          <i class="fa-brands fa-facebook-f footer-icon"></i>
+        </a>
+      </li>
+      <li class="footer_nav-item">
+        <a href="#" class="footer_nav-item">
+          <span class="sr-only">Instagram: </span>
+          <i class="fa-brands fa-instagram footer-icon"></i>
+        </a>
+      </li>
+      <li class="footer_nav-item">
+        <a href="#" class="footer_nav-item">
+          <span class="sr-only">Twitter :</span>
+          <i class="fa-brands fa-twitter footer-icon"></i>
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+</footer>
+
+</body>
+</html>

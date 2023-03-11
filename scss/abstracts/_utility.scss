@@ -1,7 +1,6 @@
 @use '../abstracts/variable';
 
 button.btn {
-	width: 100%;
 	padding-block: 0.7rem;
 	border: none;
 	border-radius: 5px;
@@ -9,6 +8,23 @@ button.btn {
 
 
 	color: white;
+	transition: 0.3s all ease-out;
+
+	&:hover, &:focus {
+		background-color: rgba(variable.$c-accent_brightblue, 0.7);
+	}
+}
+
+.btn-information:hover, .btn-information:focus {
+	color: rgba(variable.$c-accent_cyan, 0.6);
+}
+
+.footer_nav-link, .footer_nav-item {
+	transition: 0.3s all ease-out;
+}
+
+.footer_nav-link:hover, .footer_nav-link:focus, .footer_nav-social .footer_nav-item:hover, .footer_nav-social .footer_nav-item:focus {
+	color: variable.$c-accent_brightblue;
 }
 
 

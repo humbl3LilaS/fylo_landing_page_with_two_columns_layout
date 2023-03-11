@@ -6,20 +6,21 @@ body {
 	font-family: var.$ff-body;
 }
 
-.header .nav-link {
+
+.nav-link {
 	font-size: 0.875rem;
 }
 
 // *********************** Utility Classes ***********************//
 .heading-primary {
 	@include mix.bold-heading();
-	font-size: 1.4rem;
+	font-size: var.$fz-headingPrimary_tablet;
 	line-height: 1.5;
 }
 
 .heading-secondary {
-	@include  mix.bold-heading();
-	font-size: 1.05rem;
+	@include mix.bold-heading();
+	font-size: var.$fz-headingSec_tablet;
 
 }
 
@@ -27,8 +28,6 @@ body {
 	font-family: var.$ff-main;
 	text-align: center;
 }
-
-
 
 
 // *********************** section-hero ***********************//
@@ -57,7 +56,7 @@ body {
 	}
 }
 
-.customer-name	{
+.customer-name {
 	font-family: var.$ff-main;
 	font-size: 0.875rem;
 	font-weight: var.$fw-bold;
@@ -67,3 +66,79 @@ body {
 	font-size: 0.75rem;
 }
 
+// *********************** section-cta ***********************//
+
+.cta-information {
+	text-align: center;
+}
+
+// *********************** responsive ***********************//
+
+
+@media (min-width: 50em) {
+	.heading-primary{
+		font-size: var.$fz-headingPrimary_desktop;
+	}
+
+	.hero-text, .information-text {
+		font-size: var.$fz-infoText_large;
+		line-height: 1.7;
+	}
+
+	.heading-secondary {
+		text-align: left;
+	}
+
+	.cta-information {
+		text-align: left;
+	}
+}
+
+
+@media(min-width: 60em) {
+
+	.nav-link{
+		font-size: var.$fz-navItems_large;
+	}
+
+	.heading-primary, .hero-text, .cta-text {
+		text-align: left;
+	}
+
+	.heading-secondary {
+		font-size: var.$fz-headingSec_desktop;
+	}
+
+	.cta-text{
+		font-size: var.$fz-ctaText_large;
+	}
+
+
+}
+
+@media(min-width: 71.25em){
+	.testimonial-text {
+		font-size: 1.125rem;
+
+		& i {
+			font-size: 2.3rem;
+		}
+	}
+
+	.customer-name {
+		font-size: 1rem;
+	}
+
+	.customer-occupation{
+		font-size: 0.9375rem;
+	}
+
+	.btn-information {
+		font-size: 1.125rem;
+	}
+
+	.footer_nav-link, .site-address_link {
+		font-size: var.$fz-footerNavItems_large;
+	}
+
+}

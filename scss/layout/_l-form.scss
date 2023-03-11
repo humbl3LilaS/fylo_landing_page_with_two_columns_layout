@@ -1,0 +1,28 @@
+@media (min-width: 50em) {
+	.get-started {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+
+		& .input-email {
+			margin: unset;
+			flex-basis: 60%;
+		}
+
+		& .btn-form {
+			flex-basis: 25%;
+		}
+	}
+}
+
+
+@media (min-width: 60em) {
+	.get-started {
+		justify-content: space-between;
+
+		& .input-email {
+			flex-basis: 72%;
+		}
+	}
+
+}

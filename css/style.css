@@ -40,7 +40,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.header .nav-link {
+.nav-link {
   font-size: 0.875rem;
 }
 
@@ -48,7 +48,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 1.09rem + 1.32vw, 1.75rem);
   line-height: 1.5;
 }
 
@@ -56,7 +56,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
-  font-size: 1.05rem;
+  font-size: clamp(1.05rem, 0.65rem + 1.69vw, 1.5rem);
 }
 
 .btn {
@@ -92,13 +92,81 @@ body {
   font-size: 0.75rem;
 }
 
+.cta-information {
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .heading-primary {
+    font-size: clamp(1.75rem, 0.61rem + 2.27vw, 2.38rem);
+  }
+  .hero-text, .information-text {
+    font-size: clamp(1rem, 0.41rem + 1.18vw, 1.25rem);
+    line-height: 1.7;
+  }
+  .heading-secondary {
+    text-align: left;
+  }
+  .cta-information {
+    text-align: left;
+  }
+}
+@media (min-width: 60em) {
+  .nav-link {
+    font-size: clamp(0.88rem, 0.02rem + 1.43vw, 1.13rem);
+  }
+  .heading-primary, .hero-text, .cta-text {
+    text-align: left;
+  }
+  .heading-secondary {
+    font-size: clamp(1.5rem, -0.21rem + 2.86vw, 2rem);
+  }
+  .cta-text {
+    font-size: clamp(1rem, 0.75rem + 0.42vw, 1.13rem);
+  }
+}
+@media (min-width: 71.25em) {
+  .testimonial-text {
+    font-size: 1.125rem;
+  }
+  .testimonial-text i {
+    font-size: 2.3rem;
+  }
+  .customer-name {
+    font-size: 1rem;
+  }
+  .customer-occupation {
+    font-size: 0.9375rem;
+  }
+  .btn-information {
+    font-size: 1.125rem;
+  }
+  .footer_nav-link, .site-address_link {
+    font-size: clamp(1rem, 0.69rem + 0.43vw, 1.13rem);
+  }
+}
 button.btn {
-  width: 100%;
   padding-block: 0.7rem;
   border: none;
   border-radius: 5px;
   background-color: hsl(224, 93%, 58%);
   color: white;
+  transition: 0.3s all ease-out;
+}
+button.btn:hover, button.btn:focus {
+  background-color: rgba(48, 101, 248, 0.7);
+}
+
+.btn-information:hover, .btn-information:focus {
+  color: rgba(60, 159, 143, 0.6);
+}
+
+.footer_nav-link, .footer_nav-item {
+  transition: 0.3s all ease-out;
+}
+
+.footer_nav-link:hover, .footer_nav-link:focus, .footer_nav-social .footer_nav-item:hover, .footer_nav-social .footer_nav-item:focus {
+  color: hsl(224, 93%, 58%);
 }
 
 .header {
@@ -121,6 +189,27 @@ button.btn {
   text-align: center;
 }
 
+@media (min-width: 50em) {
+  .header-logo {
+    flex-basis: 15%;
+  }
+}
+@media (min-width: 60em) {
+  .header {
+    padding-inline: 3.5rem;
+  }
+  .nav-container {
+    justify-content: end;
+    align-items: center;
+    gap: 10%;
+  }
+  .header-logo {
+    flex-basis: min(15%, 10rem);
+  }
+  .nav-item:not(:first-of-type) {
+    flex-basis: unset;
+  }
+}
 .section-hero {
   padding: 3.5rem min(10%, 2.5rem);
   text-align: center;
@@ -143,7 +232,7 @@ button.btn {
 }
 
 .input-email {
-  width: 100%;
+  width: min(100%, 30rem);
   padding: 0.7rem;
   margin-bottom: 1rem;
   border-radius: 5px;
@@ -151,22 +240,37 @@ button.btn {
 }
 
 .btn-form {
+  width: min(100%, 30rem);
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media (min-width: 60em) {
+  .section-hero {
+    padding-inline: 3.5rem;
+  }
+}
+@media (min-width: 71.25em) {
+  .hero-info > * {
+    max-width: 40rem;
+  }
+}
+:root {
+  --horizontal-spacing: 6rem;
+}
+
 .section-information {
-  padding-block: 2rem 6rem;
-  margin-top: 6rem;
+  padding-block: 2rem var(--horizontal-spacing);
+  margin-top: var(--horizontal-spacing);
   background-color: hsl(240, 75%, 98%);
   position: relative;
 }
 .section-information::before {
   content: "";
   width: 100%;
-  height: 6rem;
+  height: calc(var(--horizontal-spacing));
   display: block;
   position: absolute;
-  top: -6rem;
+  top: calc(var(--horizontal-spacing) * -1);
   left: 0;
   background: url("../images/bg-curve-mobile.svg") bottom left/100% no-repeat;
 }
@@ -193,7 +297,8 @@ button.btn {
   display: block;
   padding-bottom: 5px;
   margin: 3rem auto;
-  border-bottom: 2px solid hsl(170, 45%, 43%);
+  border-bottom: 2px solid;
+  transition: 0.3s all ease-out;
 }
 
 .btn-information i {
@@ -232,6 +337,36 @@ button.btn {
   margin-bottom: 5px;
 }
 
+@media (min-width: 50em) {
+  .section-information::before {
+    background-image: url("../images/bg-curve-desktop.svg");
+  }
+  .information-img_container, .heading-secondary, .information-text {
+    padding-left: 3.5rem;
+  }
+  .heading-secondary, .information-text {
+    padding-right: 0;
+  }
+  .testimonial {
+    margin-left: 3.5rem;
+  }
+  .btn-information {
+    margin-top: 1.5rem;
+    margin-left: 3.5rem;
+  }
+}
+@media (min-width: 71.25em) {
+  :root {
+    --horizontal-spacing: 10rem;
+  }
+  .information-text {
+    max-width: 47.5rem;
+  }
+  .testimonial {
+    width: min(80%, 26.25rem);
+    padding: 2rem;
+  }
+}
 .section-cta {
   padding: 3.5rem min(10%, 2.5rem);
   background: hsl(238, 22%, 44%);
@@ -241,6 +376,9 @@ button.btn {
   margin-top: unset;
 }
 .section-cta :is(.input-email, .btn-form) {
+  width: min(80%, 400px);
+  display: block;
+  margin-inline: auto;
   border-radius: 2px;
 }
 .section-cta .btn-form {
@@ -249,9 +387,18 @@ button.btn {
 
 .cta-information {
   margin-bottom: 1rem;
-  text-align: center;
 }
 
+@media (min-width: 60em) {
+  .section-cta {
+    padding-inline: 3.5rem;
+  }
+}
+@media (min-width: 71.25em) {
+  .cta-text {
+    width: min(80%, 35rem);
+  }
+}
 .footer {
   padding: 3.5rem min(10%, 2.5rem);
   background-color: hsl(243, 87%, 12%);
@@ -300,6 +447,105 @@ button.btn {
   position: absolute;
   inset: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (min-width: 60em) {
+  .footer {
+    padding-inline: 3.5rem;
+  }
+}
+@media (min-width: 71.25rem) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-nav {
+    margin-top: 5.25rem;
+    flex-basis: 70%;
+    display: flex;
+    justify-content: start;
+    gap: 5%;
+  }
+  .footer_nav-pages {
+    flex-basis: 20%;
+    margin-bottom: unset;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_nav-social {
+    flex-basis: 20%;
+  }
+  .footer_nav > * {
+    flex-basis: 30%;
+  }
+  .footer_nav-social > * {
+    align-self: flex-start;
+  }
+}
+@media (min-width: 50em) {
+  .get-started {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .get-started .input-email {
+    margin: unset;
+    flex-basis: 60%;
+  }
+  .get-started .btn-form {
+    flex-basis: 25%;
+  }
+}
+@media (min-width: 60em) {
+  .get-started {
+    justify-content: space-between;
+  }
+  .get-started .input-email {
+    flex-basis: 72%;
+  }
+}
+@media (min-width: 50em) {
+  .section-cta.two-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-cta.two-column .cta-information {
+    flex-basis: 48%;
+  }
+  .section-cta.two-column .cta-information .heading-secondary {
+    padding: unset;
+  }
+  .section-cta.two-column .form-cta {
+    flex-basis: 48%;
+  }
+  .section-cta.two-column .form-cta > * {
+    margin-inline: unset;
+  }
+  .section-cta.two-column .form-cta .btn-form {
+    width: min(50%, 12.5rem);
+  }
+  .section-cta.two-column .form-cta .input-email {
+    width: min(80%, 60rem);
+  }
+}
+@media (min-width: 60em) {
+  .two-column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .two-column > * {
+    flex-basis: 48%;
+  }
+  .two-column div[class$=information] {
+    padding-right: 0;
+  }
+  .two-column div[class$=_container] {
+    order: 2;
+    max-width: 50rem;
+    padding-left: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

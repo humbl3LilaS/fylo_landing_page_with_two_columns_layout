@@ -1,0 +1,60 @@
+@media (min-width: 50em) {
+	// section-cta
+	.section-cta.two-column {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+
+		& .cta-information {
+			flex-basis: 48%;
+
+
+			& .heading-secondary {
+				padding: unset;
+
+			}
+		}
+
+		& .form-cta {
+			flex-basis: 48%;
+
+			& > * {
+				margin-inline: unset;
+			}
+
+			& .btn-form {
+				width: min(50%, 12.5rem);
+			}
+
+			& .input-email {
+				width: min(80%, 60rem);
+			}
+		}
+
+	}
+
+}
+
+@media (min-width: 60em) {
+	.two-column {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		& > * {
+			flex-basis: 48%;
+		}
+
+		& div[class$="information"]{
+			padding-right: 0;
+		}
+
+		& div[class$="_container"] {
+			order: 2;
+			max-width: 50rem;
+			padding-left: 0;
+		}
+	}
+
+}
